@@ -6,7 +6,7 @@ spec:
 #  type: NodePort
   ports:
   - name: http
-    port: 7070
+    port: 3000
     targetPort: 3000
   selector: 
     app: access-monitor
