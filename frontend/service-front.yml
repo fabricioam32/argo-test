@@ -3,7 +3,12 @@ kind: Service
 metadata:
   name: access-monitor-front-service
 spec:
-  type: LoadBalancer
+  type: NodePort
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+    nodePort: 30001 
   selector: 
     app: access-monitor
   ports:
