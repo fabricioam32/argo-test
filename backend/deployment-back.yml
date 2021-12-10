@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: access-monitor-back-deployment
+spec:
+  selector:
+    matchLabels:
+      app: access-monitor
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: access-monitor
+    spec:
+      containers:
+      - name: back
+        image: farcosatomic/back:v1
+        ports:
+        - containerPort: 4000
