@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: access-monitor-front-service
 spec:
-  type: NodePort
+#  type: NodePort
   ports:
   - name: http
     port: 8080
     targetPort: 3000
-    nodePort: 30001 
   selector: 
     app: access-monitor
   # ports:
